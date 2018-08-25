@@ -61,10 +61,11 @@ class ConcentrationViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        /*
         if theme == nil {
             theme = ("Foods","🥑🌭🌮🍱🍕🍙🍣🍉")
         }
-        
+        */
         backGroundView.backgroundColor = backGroundViewColor
         flipCountLabel.textColor = labelColor
         scoreLabel.textColor = labelColor

@@ -15,6 +15,12 @@
 		AD6CCECF2081714500746616 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AD6CCECE2081714500746616 /* Assets.xcassets */; };
 		AD6CCED22081714500746616 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AD6CCED02081714500746616 /* LaunchScreen.storyboard */; };
 		AD861A412103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD861A402103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift */; };
+		ADF4DBD121318AC70010BC35 /* SingleCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCB21318AC60010BC35 /* SingleCardView.swift */; };
+		ADF4DBD221318AC70010BC35 /* SetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCC21318AC60010BC35 /* SetCard.swift */; };
+		ADF4DBD321318AC70010BC35 /* CardBehavior.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCD21318AC70010BC35 /* CardBehavior.swift */; };
+		ADF4DBD421318AC70010BC35 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCE21318AC70010BC35 /* Grid.swift */; };
+		ADF4DBD521318AC70010BC35 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCF21318AC70010BC35 /* SetModel.swift */; };
+		ADF4DBD621318AC70010BC35 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBD021318AC70010BC35 /* SetViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +34,12 @@
 		AD6CCED12081714500746616 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AD6CCED32081714500746616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AD861A402103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConcentrationThemeChooserViewController.swift; sourceTree = "<group>"; };
+		ADF4DBCB21318AC60010BC35 /* SingleCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SingleCardView.swift; sourceTree = "<group>"; };
+		ADF4DBCC21318AC60010BC35 /* SetCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetCard.swift; sourceTree = "<group>"; };
+		ADF4DBCD21318AC70010BC35 /* CardBehavior.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CardBehavior.swift; sourceTree = "<group>"; };
+		ADF4DBCE21318AC70010BC35 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		ADF4DBCF21318AC70010BC35 /* SetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
+		ADF4DBD021318AC70010BC35 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -44,6 +56,8 @@
 		AD6CCEBB2081714500746616 = {
 			isa = PBXGroup;
 			children = (
+				AD6CCECB2081714500746616 /* Main.storyboard */,
+				ADF4DBCA21318A780010BC35 /* Set */,
 				AD6CCEC62081714500746616 /* Concentration */,
 				AD6CCEC52081714500746616 /* Products */,
 			);
@@ -61,7 +75,6 @@
 			isa = PBXGroup;
 			children = (
 				AD6CCEC92081714500746616 /* ConcentrationViewController.swift */,
-				AD6CCECB2081714500746616 /* Main.storyboard */,
 				AD861A402103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift */,
 				AD09C39220868F8300A2C8AF /* Concentration.swift */,
 				AD09C3942086903800A2C8AF /* Card.swift */,
@@ -79,6 +92,20 @@
 				AD6CCED02081714500746616 /* LaunchScreen.storyboard */,
 			);
 			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		ADF4DBCA21318A780010BC35 /* Set */ = {
+			isa = PBXGroup;
+			children = (
+				ADF4DBCD21318AC70010BC35 /* CardBehavior.swift */,
+				ADF4DBCE21318AC70010BC35 /* Grid.swift */,
+				ADF4DBCC21318AC60010BC35 /* SetCard.swift */,
+				ADF4DBCF21318AC70010BC35 /* SetModel.swift */,
+				ADF4DBCB21318AC60010BC35 /* SingleCardView.swift */,
+				ADF4DBD021318AC70010BC35 /* SetViewController.swift */,
+			);
+			name = Set;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -153,11 +180,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ADF4DBD221318AC70010BC35 /* SetCard.swift in Sources */,
 				AD861A412103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift in Sources */,
+				ADF4DBD521318AC70010BC35 /* SetModel.swift in Sources */,
 				AD6CCECA2081714500746616 /* ConcentrationViewController.swift in Sources */,
+				ADF4DBD621318AC70010BC35 /* SetViewController.swift in Sources */,
+				ADF4DBD121318AC70010BC35 /* SingleCardView.swift in Sources */,
 				AD6CCEC82081714500746616 /* AppDelegate.swift in Sources */,
 				AD09C39320868F8300A2C8AF /* Concentration.swift in Sources */,
 				AD09C3952086903800A2C8AF /* Card.swift in Sources */,
+				ADF4DBD321318AC70010BC35 /* CardBehavior.swift in Sources */,
+				ADF4DBD421318AC70010BC35 /* Grid.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

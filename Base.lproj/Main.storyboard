@@ -129,23 +129,199 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ics-Ty-awO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1588" y="2042"/>
+            <point key="canvasLocation" x="-1523" y="3195"/>
         </scene>
         <!--Set-->
-        <scene sceneID="naM-6o-LNh">
+        <scene sceneID="8sR-OA-r0v">
             <objects>
-                <viewController id="Mx0-R6-JI1" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="nSu-HO-Nne">
+                <viewController id="Va0-Ym-fcY" customClass="SetViewController" customModule="Concentration" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="redraw" id="Zgt-Dc-Lkx">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="Poo-ww-7LD"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="8Mp-Is-S7Y">
+                                <rect key="frame" x="16" y="20" width="992" height="31"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="AI" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bf4-tu-cQL">
+                                        <rect key="frame" x="0.0" y="0.0" width="158.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="FPf-8h-Io4">
+                                        <rect key="frame" x="166.5" y="0.0" width="161" height="31"/>
+                                        <connections>
+                                            <action selector="enableAI:" destination="Va0-Ym-fcY" eventType="valueChanged" id="JHR-MF-GSJ"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HM" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BPK-et-ez6">
+                                        <rect key="frame" x="333.5" y="0.0" width="158.5" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="lDq-hi-VV5">
+                                        <rect key="frame" x="500" y="0.0" width="160.5" height="31"/>
+                                        <connections>
+                                            <action selector="enableHardMode:" destination="Va0-Ym-fcY" eventType="valueChanged" id="7Sv-Vt-qVX"/>
+                                        </connections>
+                                    </switch>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="MP" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="M4H-Kx-iEW">
+                                        <rect key="frame" x="666.5" y="0.0" width="159" height="31"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="AIX-EA-efi" userLabel="Multiplayer">
+                                        <rect key="frame" x="833.5" y="0.0" width="160.5" height="31"/>
+                                        <connections>
+                                            <action selector="enableMultiplayer:" destination="Va0-Ym-fcY" eventType="valueChanged" id="gqi-cX-jVs"/>
+                                        </connections>
+                                    </switch>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="31" id="b8K-sq-1yt"/>
+                                </constraints>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dBx-r3-QNs">
+                                <rect key="frame" x="16" y="58" width="992" height="32"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="32" id="q2G-jZ-1Ra"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="oke-AR-zuo">
+                                <rect key="frame" x="26" y="98" width="972" height="485"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="1a1-1Q-JrX" appends="YES" id="jXh-P0-feQ"/>
+                                </connections>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wBt-9a-ARU">
+                                <rect key="frame" x="26" y="599" width="972" height="43"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillProportionally" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="o7q-PU-6Kj">
+                                        <rect key="frame" x="323.5" y="-3.5" width="324" height="50"/>
+                                        <subviews>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8aX-2I-BkE">
+                                                <rect key="frame" x="0.0" y="0.0" width="158" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Deck: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="FCK-7f-kLE">
+                                                        <rect key="frame" x="0.0" y="-1" width="158" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <gestureRecognizers/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="5nM-Xa-dWF"/>
+                                                    <constraint firstAttribute="width" constant="158" id="xAA-Fe-bay"/>
+                                                </constraints>
+                                                <connections>
+                                                    <outletCollection property="gestureRecognizers" destination="B9w-ap-bRL" appends="YES" id="yiE-r7-YuD"/>
+                                                </connections>
+                                            </view>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uC8-2c-CXJ">
+                                                <rect key="frame" x="166" y="0.0" width="158" height="50"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Matched:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dRE-dy-mEz">
+                                                        <rect key="frame" x="0.0" y="-1" width="158" height="50"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                                <color key="backgroundColor" red="1" green="0.81960784310000001" blue="0.40000000000000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="6Rk-RG-ZwK"/>
+                                                    <constraint firstAttribute="width" constant="158" id="kJG-AN-5wG"/>
+                                                </constraints>
+                                            </view>
+                                        </subviews>
+                                        <constraints>
+                                            <constraint firstItem="8aX-2I-BkE" firstAttribute="centerY" secondItem="o7q-PU-6Kj" secondAttribute="centerY" id="HPP-L6-ltB"/>
+                                            <constraint firstItem="uC8-2c-CXJ" firstAttribute="centerY" secondItem="o7q-PU-6Kj" secondAttribute="centerY" id="Q5E-W6-9eD"/>
+                                        </constraints>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="AKb-a1-k3X"/>
+                                    <constraint firstItem="o7q-PU-6Kj" firstAttribute="centerY" secondItem="wBt-9a-ARU" secondAttribute="centerY" id="kBa-ub-HD6"/>
+                                    <constraint firstItem="o7q-PU-6Kj" firstAttribute="centerX" secondItem="wBt-9a-ARU" secondAttribute="centerX" id="s7g-Y2-1Wc"/>
+                                </constraints>
+                            </view>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" alignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ktC-gt-eOK">
+                                <rect key="frame" x="26" y="658" width="972" height="36"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PPu-4b-mHa">
+                                        <rect key="frame" x="0.0" y="0.0" width="972" height="36"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                        <state key="normal" title="New Game">
+                                            <color key="titleColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="newGame:" destination="Va0-Ym-fcY" eventType="touchUpInside" id="G9J-9Z-mLF"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="0.98823529409999999" blue="0.97647058819999999" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="trailing" secondItem="dBx-r3-QNs" secondAttribute="trailing" constant="16" id="2oC-ZG-Tl9"/>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="bottom" secondItem="ktC-gt-eOK" secondAttribute="bottom" constant="25" id="Dcw-Dv-sAx"/>
+                            <constraint firstItem="ktC-gt-eOK" firstAttribute="top" secondItem="wBt-9a-ARU" secondAttribute="bottom" constant="16" id="Efc-w5-K2y"/>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="trailing" secondItem="oke-AR-zuo" secondAttribute="trailing" constant="26" id="Ezs-LF-wpI"/>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="trailing" secondItem="ktC-gt-eOK" secondAttribute="trailing" constant="26" id="GFC-TT-eMI"/>
+                            <constraint firstItem="8Mp-Is-S7Y" firstAttribute="top" secondItem="tDa-pY-vPN" secondAttribute="top" id="Hdi-8F-xXl"/>
+                            <constraint firstItem="oke-AR-zuo" firstAttribute="top" secondItem="dBx-r3-QNs" secondAttribute="bottom" constant="8" id="JEd-bn-eHj"/>
+                            <constraint firstItem="wBt-9a-ARU" firstAttribute="top" secondItem="oke-AR-zuo" secondAttribute="bottom" constant="16" id="KdZ-Ba-ar2"/>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="trailing" secondItem="wBt-9a-ARU" secondAttribute="trailing" constant="26" id="R7X-ka-qzO"/>
+                            <constraint firstItem="wBt-9a-ARU" firstAttribute="leading" secondItem="tDa-pY-vPN" secondAttribute="leading" constant="26" id="UO5-Qu-80Q"/>
+                            <constraint firstItem="tDa-pY-vPN" firstAttribute="trailing" secondItem="8Mp-Is-S7Y" secondAttribute="trailing" constant="16" id="WpX-3n-G3d"/>
+                            <constraint firstItem="8Mp-Is-S7Y" firstAttribute="leading" secondItem="tDa-pY-vPN" secondAttribute="leading" constant="16" id="f7k-8H-ocN"/>
+                            <constraint firstItem="dBx-r3-QNs" firstAttribute="leading" secondItem="tDa-pY-vPN" secondAttribute="leading" constant="16" id="iN5-FF-s4j"/>
+                            <constraint firstItem="dBx-r3-QNs" firstAttribute="top" secondItem="8Mp-Is-S7Y" secondAttribute="bottom" constant="7" id="lrq-0G-Zly"/>
+                            <constraint firstItem="oke-AR-zuo" firstAttribute="leading" secondItem="tDa-pY-vPN" secondAttribute="leading" constant="26" id="qP4-Zf-zFD"/>
+                            <constraint firstItem="ktC-gt-eOK" firstAttribute="leading" secondItem="tDa-pY-vPN" secondAttribute="leading" constant="26" id="yjM-9l-Se8"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="tDa-pY-vPN"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Set" image="setImage" id="DtQ-bl-385"/>
+                    <tabBarItem key="tabBarItem" title="Set" image="setImage" id="L45-S3-NV2"/>
+                    <connections>
+                        <outlet property="aiSwitch" destination="FPf-8h-Io4" id="yRZ-0I-D7S"/>
+                        <outlet property="appView" destination="Zgt-Dc-Lkx" id="eeN-Up-Pl8"/>
+                        <outlet property="deckLabel" destination="FCK-7f-kLE" id="OV5-e6-lZF"/>
+                        <outlet property="deckView" destination="8aX-2I-BkE" id="bmy-OU-yUa"/>
+                        <outlet property="discardLabel" destination="dRE-dy-mEz" id="FtW-1y-6l4"/>
+                        <outlet property="hardMode" destination="lDq-hi-VV5" id="J0O-gp-vbC"/>
+                        <outlet property="matchLabel" destination="dBx-r3-QNs" id="iq1-70-YDm"/>
+                        <outlet property="matchedView" destination="uC8-2c-CXJ" id="D1I-AM-5rw"/>
+                        <outlet property="multiPlayerSwitch" destination="AIX-EA-efi" id="cFo-pM-eWH"/>
+                        <outlet property="setCardView" destination="oke-AR-zuo" id="hgw-D8-E1i"/>
+                    </connections>
                 </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8TC-2j-MvH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="aep-wX-PEb" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="1a1-1Q-JrX">
+                    <connections>
+                        <action selector="tapCard:" destination="Va0-Ym-fcY" id="pP3-2F-C47"/>
+                    </connections>
+                </tapGestureRecognizer>
+                <tapGestureRecognizer id="B9w-ap-bRL" userLabel="Deck Tap Gesture Recognizer">
+                    <connections>
+                        <action selector="tapOnDeck:" destination="Va0-Ym-fcY" id="4GD-Hr-ad1"/>
+                    </connections>
+                </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="-1588" y="1386"/>
+            <point key="canvasLocation" x="-88" y="2309"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="80U-hv-QVU">
@@ -157,8 +333,8 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
+                        <segue destination="Va0-Ym-fcY" kind="relationship" relationship="viewControllers" id="2UL-fq-5GQ"/>
                         <segue destination="nYI-eg-Y9T" kind="relationship" relationship="viewControllers" id="DaT-C5-5am"/>
-                        <segue destination="Mx0-R6-JI1" kind="relationship" relationship="viewControllers" id="WBR-FF-C9R"/>
                         <segue destination="JLc-c3-PQl" kind="relationship" relationship="viewControllers" id="Zes-bb-1U8"/>
                     </connections>
                 </tabBarController>
