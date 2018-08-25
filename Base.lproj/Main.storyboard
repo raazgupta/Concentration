@@ -115,7 +115,7 @@
             </objects>
             <point key="canvasLocation" x="-1523" y="660"/>
         </scene>
-        <!--Gallery-->
+        <!--Image Gallery-->
         <scene sceneID="cVa-1P-2FR">
             <objects>
                 <viewController id="JLc-c3-PQl" sceneMemberID="viewController">
@@ -125,7 +125,7 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <viewLayoutGuide key="safeArea" id="hDg-PF-DGp"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Gallery" image="imageGalleryImage" id="2aC-IN-LDg"/>
+                    <tabBarItem key="tabBarItem" title="Image Gallery" image="imageGalleryImage" id="2aC-IN-LDg"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ics-Ty-awO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
