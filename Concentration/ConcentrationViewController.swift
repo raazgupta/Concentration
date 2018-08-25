@@ -10,6 +10,7 @@ import UIKit
 
 class ConcentrationViewController: UIViewController
 {
+    
     @IBOutlet var backGroundView: UIView!
     
     var emojiChoices = ""

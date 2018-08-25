@@ -9,7 +9,7 @@
 import UIKit
 
 class ConcentrationThemeChooserViewController: UIViewController, UISplitViewControllerDelegate {
-
+    
     private let themes = ["Halloween": "🎃👻🦇😱👿👺🤡👽",
                           "Animals": "🐼🦄🐰🐯🐷🐶🦕🦖",
                           "Faces": "😇😍😭🤥🎅🏽😡👨‍👩‍👧‍👦🧛🏻‍♀️",
@@ -19,6 +19,7 @@ class ConcentrationThemeChooserViewController: UIViewController, UISplitViewCont
     ]
     
     override func awakeFromNib() {
+        super.awakeFromNib()
         splitViewController?.delegate = self
     }
     

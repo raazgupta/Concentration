@@ -128,6 +128,7 @@ class SetViewController: UIViewController {
     
     
     override func viewDidLoad() {
+        super.viewDidLoad()
         setGame = SetModel(showCards: initialNumCardsOnScreen)
         updateViewTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {_ in self.updateViewFromModel()})
         

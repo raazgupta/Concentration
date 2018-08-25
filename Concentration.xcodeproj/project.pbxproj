@@ -21,6 +21,7 @@
 		ADF4DBD421318AC70010BC35 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCE21318AC70010BC35 /* Grid.swift */; };
 		ADF4DBD521318AC70010BC35 /* SetModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBCF21318AC70010BC35 /* SetModel.swift */; };
 		ADF4DBD621318AC70010BC35 /* SetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBD021318AC70010BC35 /* SetViewController.swift */; };
+		ADF4DBD9213211DF0010BC35 /* VCLLoggingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ADF4DBD8213211DF0010BC35 /* VCLLoggingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 		ADF4DBCE21318AC70010BC35 /* Grid.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
 		ADF4DBCF21318AC70010BC35 /* SetModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetModel.swift; sourceTree = "<group>"; };
 		ADF4DBD021318AC70010BC35 /* SetViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetViewController.swift; sourceTree = "<group>"; };
+		ADF4DBD8213211DF0010BC35 /* VCLLoggingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VCLLoggingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -80,6 +82,7 @@
 				AD09C3942086903800A2C8AF /* Card.swift */,
 				AD6CCED32081714500746616 /* Info.plist */,
 				AD6CCED9208173F200746616 /* Supporting Files */,
+				ADF4DBD8213211DF0010BC35 /* VCLLoggingViewController.swift */,
 			);
 			path = Concentration;
 			sourceTree = "<group>";
@@ -181,6 +184,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				ADF4DBD221318AC70010BC35 /* SetCard.swift in Sources */,
+				ADF4DBD9213211DF0010BC35 /* VCLLoggingViewController.swift in Sources */,
 				AD861A412103EDC90072BBB1 /* ConcentrationThemeChooserViewController.swift in Sources */,
 				ADF4DBD521318AC70010BC35 /* SetModel.swift in Sources */,
 				AD6CCECA2081714500746616 /* ConcentrationViewController.swift in Sources */,
