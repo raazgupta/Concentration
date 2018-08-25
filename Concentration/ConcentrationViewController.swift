@@ -29,31 +29,9 @@ class ConcentrationViewController: UIViewController
     private var backGroundViewColor = #colorLiteral(red: 0.9919172973, green: 0.9919172973, blue: 0.9919172973, alpha: 1)
     private var labelColor = #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1)
     
-    /*
-    var numberOfPairsOfCards: Int {
-        return (cardButtons.count+1)/2
-    }
- 
-    
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "New Game" {
-            if let ctcvc = segue.destination as? ConcentrationThemeChooserViewController {
-            }
-        }
-    }
-    */
     
     @IBOutlet private weak var flipCountLabel: UILabel! {
         didSet {
-            /*
-            let attributes: [NSAttributedStringKey:Any] = [
-                .strokeWidth : 5.0,
-                .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-            ]
-            
-            let attributedString = NSAttributedString(string: "Flips: \(game.flipCount)", attributes: attributes)
-            flipCountLabel.attributedText = attributedString
-            */
             flipCountLabel.text = "Flips: \(game.flipCount)"
         }
     }
@@ -66,11 +44,6 @@ class ConcentrationViewController: UIViewController
     
     @IBAction func newGame(_ sender: UIButton) {
         game = Concentration()
-        /*
-        randomThemeKeyIndex = arc4random_uniform(UInt32(themeKeys.count))
-        randomThemeKey = themeKeys[Int(randomThemeKeyIndex)]
-        emojiChoices = themes[randomThemeKey]
-         */
         updateViewFromModel()
         
         navigationController?.popViewController(animated: true)
@@ -101,15 +74,6 @@ class ConcentrationViewController: UIViewController
     }
     
     private func updateViewFromModel() {
-        /*
-        let attributes: [NSAttributedStringKey:Any] = [
-            .strokeWidth : 5.0,
-            .strokeColor : #colorLiteral(red: 0, green: 0, blue: 0, alpha: 1)
-        ]
-        
-        let attributedString = NSAttributedString(string: "Flips: \(game.flipCount)", attributes: attributes)
-        */
-        
         
         if scoreLabel != nil {
             scoreLabel.text = "Score: \(game.score)"
