@@ -69,17 +69,29 @@ class SetModel{
     private let colors = [CardColor.green,CardColor.purple,CardColor.red]
     
 
-    
+    /*
     func isAllSame<T: Equatable>(type: T.Type, a: Any, b: Any, c:Any) -> Bool {
         guard let a = a as? T, let b = b as? T, let c = c as? T else { return false }
         return (a == b && b == c && a == c)
     }
+    */
     
+    func isAllSame<T: Equatable>(a: T, b: T, c: T) -> Bool {
+        //guard let a = a as? T, let b = b as? T, let c = c as? T else { return false }
+        return (a == b && b == c && a == c)
+    }
+    
+    /*
     func isAllDifferent<T: Equatable>(type: T.Type, a: Any, b: Any, c:Any) -> Bool {
         guard let a = a as? T, let b = b as? T, let c = c as? T else { return false }
         return (a != b && b != c && a != c)
     }
+    */
     
+    func isAllDifferent<T: Equatable>(a: T, b: T, c: T) -> Bool {
+        //guard let a = a as? T, let b = b as? T, let c = c as? T else { return false }
+        return (a != b && b != c && a != c)
+    }
 
     private func checkForMatchEasy(card1: SetCard, card2: SetCard, card3: SetCard) -> Bool {
         return true
@@ -98,16 +110,16 @@ class SetModel{
         var matchResult = false
 
         // Check number
-        if isAllSame(type: CardNumber.self, a: card1.number, b: card2.number, c: card3.number) || isAllDifferent(type: CardNumber.self, a: card1.number, b: card2.number, c: card3.number) {
+        if isAllSame(a: card1.number, b: card2.number, c: card3.number) || isAllDifferent(a: card1.number, b: card2.number, c: card3.number) {
             
             // Check symbol
-            if isAllSame(type: CardSymbol.self, a: card1.symbol, b: card2.symbol, c: card3.symbol) || isAllDifferent(type: CardSymbol.self, a: card1.symbol, b: card2.symbol, c: card3.symbol) {
+            if isAllSame(a: card1.symbol, b: card2.symbol, c: card3.symbol) || isAllDifferent(a: card1.symbol, b: card2.symbol, c: card3.symbol) {
             
                 // Check shading
-                if isAllSame(type: CardShading.self, a: card1.shading, b: card2.shading, c: card3.shading) || isAllDifferent(type: CardShading.self, a: card1.shading, b: card2.shading, c: card3.shading) {
+                if isAllSame(a: card1.shading, b: card2.shading, c: card3.shading) || isAllDifferent(a: card1.shading, b: card2.shading, c: card3.shading) {
                     
                     // Check color
-                    if isAllSame(type: CardColor.self, a: card1.color, b: card2.color, c: card3.color) || isAllDifferent(type: CardColor.self, a: card1.color, b: card2.color, c: card3.color) {
+                    if isAllSame(a: card1.color, b: card2.color, c: card3.color) || isAllDifferent(a: card1.color, b: card2.color, c: card3.color) {
                         
                         matchResult = true
                         

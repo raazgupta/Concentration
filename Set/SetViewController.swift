@@ -286,7 +286,7 @@ class SetViewController: UIViewController {
                                 cardBehavior.addItem(matchedCard)
                                 
                                 // Start a timer to stop cards from flying around, remove the behaviors and flip to discard pile
-                                let flyTime = 4.0
+                                let flyTime = 3.0
                                 /*
                                 if status == .match {
                                     flyTime = 3.0
