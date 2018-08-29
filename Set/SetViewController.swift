@@ -29,7 +29,7 @@ class SetViewController: UIViewController {
     }
     
     private var setGame: SetModel?
-    private let initialNumCardsOnScreen = 12
+    private let initialNumCardsOnScreen = 15
     
     @IBOutlet weak var matchLabel: UILabel!
     
@@ -286,10 +286,12 @@ class SetViewController: UIViewController {
                                 cardBehavior.addItem(matchedCard)
                                 
                                 // Start a timer to stop cards from flying around, remove the behaviors and flip to discard pile
-                                var flyTime = 4.0
+                                let flyTime = 4.0
+                                /*
                                 if status == .match {
                                     flyTime = 3.0
                                 }
+                                */
                                 Timer.scheduledTimer(withTimeInterval: flyTime, repeats: false, block: {_ in self.discardCardView()})
                                 
                             }
