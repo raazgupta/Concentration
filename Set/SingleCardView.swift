@@ -9,7 +9,7 @@
 import UIKit
 
 class SingleCardView: UIView {
-    var card: Card? {
+    var card: SetCard? {
         didSet {setNeedsDisplay(); setNeedsLayout()}
     }
     var isSelected = false {
@@ -36,8 +36,8 @@ class SingleCardView: UIView {
             rectInFrame.fill()
             
             if isSelected == true {
-                #colorLiteral(red: 1, green: 0.8196078431, blue: 0.4, alpha: 1).setStroke()
-                rectInFrame.lineWidth = 7.0
+                #colorLiteral(red: 0.02352941176, green: 0.8392156863, blue: 0.6274509804, alpha: 1).setStroke()
+                rectInFrame.lineWidth = 8.0
                 rectInFrame.stroke()
             }
             

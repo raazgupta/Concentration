@@ -104,8 +104,7 @@
 				ADF4DBCB21318AC60010BC35 /* SingleCardView.swift */,
 				ADF4DBD021318AC70010BC35 /* SetViewController.swift */,
 			);
-			name = Set;
-			path = "New Group";
+			path = Set;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */

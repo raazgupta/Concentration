@@ -18,10 +18,10 @@ enum multiplayerChoosing {
 
 class SetModel{
     
-    private var remainingDeck = [Card]()
-    private(set) var displayedDeck = [Card]()
-    private(set) var selectedCards = [Card]()
-    private(set) var matchedCards = [Card]()
+    private var remainingDeck = [SetCard]()
+    private(set) var displayedDeck = [SetCard]()
+    private(set) var selectedCards = [SetCard]()
+    private(set) var matchedCards = [SetCard]()
     private(set) var status = matchStatus.stillChoosing
     private(set) var score = 0
     private(set) var machineScore = 0
@@ -81,7 +81,7 @@ class SetModel{
     }
     
 
-    private func checkForMatchEasy(card1: Card, card2: Card, card3: Card) -> Bool {
+    private func checkForMatchEasy(card1: SetCard, card2: SetCard, card3: SetCard) -> Bool {
         return true
     }
     
@@ -94,7 +94,7 @@ class SetModel{
         }
     }
     
-    private func checkForMatch(card1: Card, card2: Card, card3: Card) -> Bool {
+    private func checkForMatch(card1: SetCard, card2: SetCard, card3: SetCard) -> Bool {
         var matchResult = false
 
         // Check number
@@ -123,7 +123,7 @@ class SetModel{
     }
     
     
-    private func findMatchInDisplayedDeck () -> ([(Card)],Bool) {
+    private func findMatchInDisplayedDeck () -> ([(SetCard)],Bool) {
         
         for card1 in displayedDeck {
             var remainingDeck1 = displayedDeck
@@ -186,7 +186,7 @@ class SetModel{
     private func clearMachineMatch() {
         status = .machineChoosing
         drawThreeCards()
-        selectedCards = [Card]()
+        selectedCards = [SetCard]()
         if isMatchAvailable() {
             enableAI()
         }
@@ -222,10 +222,10 @@ class SetModel{
                     
                     if selectedCards.count == 3 && status == .match {
                         drawThreeCards()
-                        selectedCards = [Card]()
+                        selectedCards = [SetCard]()
                     }
                     else if selectedCards.count == 3 && status == .noMatch {
-                        selectedCards = [Card]()
+                        selectedCards = [SetCard]()
                     }
                     else {
                         if selectedCards.contains(cardTouched) {
@@ -247,7 +247,7 @@ class SetModel{
                         if checkForMatch(card1: selectedCards[0], card2: selectedCards[1], card3: selectedCards[2]) {
                             drawThreeCards()
                         }
-                        selectedCards = [Card]()
+                        selectedCards = [SetCard]()
                         
                         if isAIEnabled  == false
                         {
@@ -340,7 +340,7 @@ class SetModel{
                         }
                     }
                 }
-                selectedCards = [Card]()
+                selectedCards = [SetCard]()
                 
                 if isAIEnabled {
                     status = .machineChoosing
@@ -387,7 +387,7 @@ class SetModel{
             for cardSymbol in symbols{
                 for cardShading in shadings {
                     for cardColor in colors {
-                        let card = Card(number: cardNumber,symbol: cardSymbol,shading: cardShading,color: cardColor)
+                        let card = SetCard(number: cardNumber,symbol: cardSymbol,shading: cardShading,color: cardColor)
                         remainingDeck.append(card)
                     }
                 }
@@ -442,20 +442,10 @@ class SetModel{
         multiplayerChoosingTimer?.invalidate()
         multiplayerChoosingTimer = nil
         playerNumber = .none
-        selectedCards = [Card]()
+        selectedCards = [SetCard]()
         status = .stillChoosing
     }
     
 }
 
-extension Int {
-    var arc4random: Int {
-        if self > 0 {
-            return Int(arc4random_uniform(UInt32(self)))
-        } else if self < 0 {
-            return -Int(arc4random_uniform(UInt32(abs(self))))
-        } else {
-            return 0
-        }
-    }
-}
+
