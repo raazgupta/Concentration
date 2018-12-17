@@ -132,10 +132,10 @@ class SetViewController: UIViewController {
         updateViewTimer = Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true, block: {_ in self.updateViewFromModel()})
         
         // When the app goes to the background, invalidate the screen refresh timer
-        NotificationCenter.default.addObserver(self, selector: #selector(invalidateScreenRefresh), name: Notification.Name.UIApplicationDidEnterBackground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(invalidateScreenRefresh), name: UIApplication.didEnterBackgroundNotification, object: nil)
         
         // When the app goes to foreground, start the screen refresh timer again
-        NotificationCenter.default.addObserver(self, selector: #selector(enableScreenRefresh), name: Notification.Name.UIApplicationWillEnterForeground, object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(enableScreenRefresh), name: UIApplication.willEnterForegroundNotification, object: nil)
         
         // Set the card grid frame depending on the size of the area available to display the cards
         if setCardView != nil {

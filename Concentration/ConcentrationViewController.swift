@@ -91,12 +91,12 @@ class ConcentrationViewController: UIViewController
                     // Animate the Flip Up of the latest card that was touched
                     if index == game.buttonIndexToFlipUp {
                         UIView.transition(with: button, duration: 0.6, options: [.transitionFlipFromLeft], animations: {
-                            button.setTitle(self.emoji (for: card), for: UIControlState.normal)
+                            button.setTitle(self.emoji (for: card), for: UIControl.State.normal)
                             button.backgroundColor = self.cardFaceUpColor
                         })
                     }
                     else {
-                        button.setTitle(self.emoji (for: card), for: UIControlState.normal)
+                        button.setTitle(self.emoji (for: card), for: UIControl.State.normal)
                         button.backgroundColor = self.cardFaceUpColor
                     }
                 }
@@ -104,12 +104,12 @@ class ConcentrationViewController: UIViewController
                     if game.buttonIndicesToFlipDown.count > 2 && game.buttonIndicesToFlipDown.contains(index) {
                         // Animate flip down of previous 2 cards flipped up
                         UIView.transition(with: button, duration: 0.6, options: [.transitionFlipFromRight], animations: {
-                            button.setTitle("", for: UIControlState.normal)
+                            button.setTitle("", for: UIControl.State.normal)
                             button.backgroundColor = card.isMatched ? self.backGroundViewColor : self.cardFaceDownColor
                         })
                     }
                     else {
-                        button.setTitle("", for: UIControlState.normal)
+                        button.setTitle("", for: UIControl.State.normal)
                         button.backgroundColor = card.isMatched ? self.backGroundViewColor : self.cardFaceDownColor
                     }
                 }
