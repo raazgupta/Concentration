@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		AD09C39320868F8300A2C8AF /* Concentration.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD09C39220868F8300A2C8AF /* Concentration.swift */; };
 		AD09C3952086903800A2C8AF /* Card.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD09C3942086903800A2C8AF /* Card.swift */; };
+		AD2BEA3321C9928100560C7F /* HelpDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD2BEA3221C9928100560C7F /* HelpDetailsViewController.swift */; };
 		AD3CFF7521C7B7C900AD800E /* HelpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD3CFF7421C7B7C900AD800E /* HelpViewController.swift */; };
 		AD6CCEC82081714500746616 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CCEC72081714500746616 /* AppDelegate.swift */; };
 		AD6CCECA2081714500746616 /* ConcentrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD6CCEC92081714500746616 /* ConcentrationViewController.swift */; };
@@ -27,6 +28,7 @@
 /* Begin PBXFileReference section */
 		AD09C39220868F8300A2C8AF /* Concentration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Concentration.swift; sourceTree = "<group>"; };
 		AD09C3942086903800A2C8AF /* Card.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Card.swift; sourceTree = "<group>"; };
+		AD2BEA3221C9928100560C7F /* HelpDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpDetailsViewController.swift; sourceTree = "<group>"; };
 		AD3CFF7421C7B7C900AD800E /* HelpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelpViewController.swift; sourceTree = "<group>"; };
 		AD6CCEC42081714500746616 /* Concentration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Concentration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD6CCEC72081714500746616 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -58,6 +60,7 @@
 		AD3CFF7121C7B6B300AD800E /* Help */ = {
 			isa = PBXGroup;
 			children = (
+				AD2BEA3221C9928100560C7F /* HelpDetailsViewController.swift */,
 				AD3CFF7421C7B7C900AD800E /* HelpViewController.swift */,
 			);
 			path = Help;
@@ -197,6 +200,7 @@
 				AD6CCECA2081714500746616 /* ConcentrationViewController.swift in Sources */,
 				ADF4DBD621318AC70010BC35 /* SetViewController.swift in Sources */,
 				ADF4DBD121318AC70010BC35 /* SingleCardView.swift in Sources */,
+				AD2BEA3321C9928100560C7F /* HelpDetailsViewController.swift in Sources */,
 				AD6CCEC82081714500746616 /* AppDelegate.swift in Sources */,
 				AD3CFF7521C7B7C900AD800E /* HelpViewController.swift in Sources */,
 				AD09C39320868F8300A2C8AF /* Concentration.swift in Sources */,
