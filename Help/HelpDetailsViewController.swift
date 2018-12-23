@@ -21,32 +21,13 @@ class HelpDetailsViewController: UIViewController {
 
         helpText.attributedText = helpAttString
         
-        /*
-        switch itemSelected {
-        case 0:
-            //backButton.titleLabel?.text = "Back"
-            //backButton.titleLabel?.text = "Back"
-            backButton.setTitle("Back", for: .normal)
-        case 1:
-            //backButton.titleLabel?.text = "Zurück"
-            //backButton.currentTitle = "Zurück"
-            backButton.setTitle("Zurück", for: .normal)
-        default:
-            break
-        }
-         */
-        
+    }
+    
+    override func viewDidLayoutSubviews() {
+        super.viewDidLayoutSubviews()
+        helpText.setContentOffset(.zero, animated: false)
     }
     
 
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }

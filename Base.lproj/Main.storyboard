@@ -124,7 +124,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="fg8-vC-z42">
-                                <rect key="frame" x="16" y="201" width="343" height="309"/>
+                                <rect key="frame" x="16" y="201" width="343" height="417"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <prototypes>
@@ -145,14 +145,14 @@
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Help / Hilfe" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="04s-NW-aVj">
                                 <rect key="frame" x="36" y="99" width="303" height="57.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="48"/>
-                                <nil key="textColor"/>
+                                <color key="textColor" red="0.14901960780000001" green="0.3294117647" blue="0.48627450979999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstAttribute="bottom" secondItem="fg8-vC-z42" secondAttribute="bottom" constant="157" id="3GL-yy-RBS"/>
                             <constraint firstItem="ISd-Gu-FyT" firstAttribute="trailing" secondItem="04s-NW-aVj" secondAttribute="trailing" constant="36" id="4VQ-Aa-qIq"/>
+                            <constraint firstItem="ISd-Gu-FyT" firstAttribute="bottom" secondItem="fg8-vC-z42" secondAttribute="bottom" id="QqV-f5-thl"/>
                             <constraint firstItem="ISd-Gu-FyT" firstAttribute="trailing" secondItem="fg8-vC-z42" secondAttribute="trailing" constant="16" id="Umh-Z9-NM0"/>
                             <constraint firstItem="fg8-vC-z42" firstAttribute="top" secondItem="04s-NW-aVj" secondAttribute="bottom" constant="44.5" id="b10-Tw-he4"/>
                             <constraint firstItem="04s-NW-aVj" firstAttribute="leading" secondItem="ISd-Gu-FyT" secondAttribute="leading" constant="36" id="jaB-tW-9wa"/>
@@ -186,12 +186,12 @@
                                 </accessibility>
                                 <attributedString key="attributedText">
                                     <fragment>
-                                        <string key="content">How to play Set  Cards will match if the following conditions are satisfied:   They all have the same number or have three different numbers. 
+                                        <mutableString key="content">How to play Set  Cards will match if the following conditions are satisfied:   They all have the same number or have three different numbers. 
 They all have the same symbol or have three different symbols. 
 They all have the same shading or have three different shadings. 
-They all have the same color or have three different colors.  </string>
+They all have the same color or have three different colors.  </mutableString>
                                         <attributes>
-                                            <font key="NSFont" size="17" name=".AppleSystemUIFont"/>
+                                            <font key="NSFont" size="17" name=".SFNSText"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
                                         </attributes>
                                     </fragment>
@@ -199,7 +199,7 @@ They all have the same color or have three different colors.  </string>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" red="1" green="0.9882352941176471" blue="0.97647058823529409" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="y3f-Sc-65t" firstAttribute="trailing" secondItem="f9E-KO-ukB" secondAttribute="trailing" constant="16" id="0im-04-Y7r"/>
                             <constraint firstItem="f9E-KO-ukB" firstAttribute="centerX" secondItem="y3f-Sc-65t" secondAttribute="centerX" id="RzZ-BF-pdc"/>
@@ -709,6 +709,6 @@ They all have the same color or have three different colors.  </string>
         <image name="setImage" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="Y71-fT-Egs"/>
+        <segue reference="Vi2-0Q-L19"/>
     </inferredMetricsTieBreakers>
 </document>
