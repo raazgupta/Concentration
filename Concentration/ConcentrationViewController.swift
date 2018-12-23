@@ -24,9 +24,9 @@ class ConcentrationViewController: UIViewController
     
     private lazy var game = Concentration()
     
-    private var cardFaceUpColor = #colorLiteral(red: 0.9919172973, green: 0.9919172973, blue: 0.9919172973, alpha: 1)
-    private var cardFaceDownColor = #colorLiteral(red: 0.02352941176, green: 0.8392156863, blue: 0.6274509804, alpha: 1)
-    private var backGroundViewColor = #colorLiteral(red: 0.9919172973, green: 0.9919172973, blue: 0.9919172973, alpha: 1)
+    private var cardFaceUpColor = #colorLiteral(red: 1, green: 0.9882352941, blue: 0.9764705882, alpha: 1)
+    private var cardFaceDownColor = #colorLiteral(red: 0.1490196078, green: 0.3294117647, blue: 0.4862745098, alpha: 1)
+    private var backGroundViewColor = #colorLiteral(red: 1, green: 0.9882352941, blue: 0.9764705882, alpha: 1)
     private var labelColor = #colorLiteral(red: 0.937254902, green: 0.2784313725, blue: 0.4352941176, alpha: 1)
     
     
