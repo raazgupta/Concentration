@@ -14,10 +14,13 @@ class ConcentrationViewController: UIViewController
     
     var emojiChoices = ""
     
-    var theme: (thmeName: String,themeElements: String)? {
+    var lastTheme = ("","")
+    
+    var theme: (themeName: String,themeElements: String)? {
         didSet {
             emojiChoices = theme?.themeElements ?? ""
             emoji = [:]
+            lastTheme = ((theme?.themeName)!,(theme?.themeElements)!)
             updateViewFromModel()
         }
     }
@@ -44,7 +47,12 @@ class ConcentrationViewController: UIViewController
     
     @IBAction func newGame(_ sender: UIButton) {
         game = Concentration()
-        updateViewFromModel()
+        
+        theme = lastTheme
+        //emoji =  [Card:String]()
+        
+        
+        //updateViewFromModel()
         
         navigationController?.popViewController(animated: true)
         
@@ -61,11 +69,11 @@ class ConcentrationViewController: UIViewController
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*
+        
         if theme == nil {
             theme = ("Foods","🥑🌭🌮🍱🍕🍙🍣🍉")
         }
-        */
+        
         backGroundView.backgroundColor = backGroundViewColor
         flipCountLabel.textColor = labelColor
         scoreLabel.textColor = labelColor
@@ -129,6 +137,9 @@ class ConcentrationViewController: UIViewController
         if  emoji[card] == nil, emojiChoices.count > 0 {
             let randomStringIndex = emojiChoices.index(emojiChoices.startIndex, offsetBy: emojiChoices.count.arc4random)
                 emoji[card] = String(emojiChoices.remove(at: randomStringIndex))
+        }
+        if emoji[card] == nil {
+            print(emoji[card] ?? "<empty>")
         }
         return emoji[card] ?? "?"
     }
